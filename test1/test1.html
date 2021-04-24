@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fashionable clothes</title>
+</head>
+<style>
+    *{
+        padding:0;
+        margin:0;
+    }
+    .navbar{
+        display:flex;
+        top:0;     
+        background-color:silver ;  
+        position:sticky;
+    }
+    .leftnav{
+        display:flex;
+        /* width:50%; */
+        justify-items: center;
+        align-items:center;
+        
+    }
+    .rightnav{
+        /* display:flex;  */
+        width:80%;
+        text-align: right;
+        margin:30px 10px;
+       
+    }
+    .list-items ul{
+        display:flex;
+        margin: 0 30px;
+        list-style: none;
+        width:60%;
+    }
+    .list-items li{
+        margin-right:30px;
+    }
+    .list-items li a{
+        text-decoration: none;
+        color: rgb(207, 129, 129);
+        font-size: 28px;
+    }
+    .list-items li a:hover{
+        color: white;
+    }
+    .btn{
+        text-align: right;
+        margin-right: 2px;
+        padding: 8px  15px;
+        background:rgb(138, 108, 108);
+        border-radius: 20px;
+        color:white;
+    }
+    .btn:hover{
+        color:skyblue;
+        cursor:pointer;
+    }
+    #search{
+        padding: 8px  15px;
+        border-radius: 20px;
+        margin-right: 10px;
+    }
+    .logo img{
+        border-radius: 50%;
+    }
+    .offer{
+        background-image: url('ffer.jpg');
+        background-size: cover;
+        height: 100vh;
+    }
+    .title{
+        font-size: 70px;
+        font-family: cursive;
+        color:white;
+      
+        /* display:inline-bl */
+        text-align: center;
+    }
+    .title:hover{
+        color: teal;
+        cursor: pointer;
+    }
+    .dresses{
+        padding:100px;
+        display:flex;
+        justify-items:center;
+        align-items:center;
+        justify-content: space-evenly;
+        /* flex-direction: column; */
+    }
+    
+     #category{
+        margin-bottom: 20px;
+        /* margin-left:430px; */
+        color: purple;
+        font-size: 80px;
+        /* margin-top: 120px ; */
+        margin-left:540px;
+    }
+    /* .womens{
+        border: 2px solid navy;
+        display: block;
+        padding-left:40%;
+        padding-top:auto;
+
+    } */
+    .off {
+        color:purple;
+        font-size:30px;
+        /* padding-left:30px; */
+        text-align:center; 
+    }
+    .off:hover{
+        color:blue;
+        cursor: pointer;
+    }
+    .cat{
+        color:purple;
+        font-size:30px;
+        /* padding-left:40px; */
+        text-align:center; 
+    }
+    .cat:hover{
+
+        color:blue;
+        cursor: pointer;
+    }
+    .womens{
+        border: 2px solid purple;
+        margin-bottom: 20px;
+        margin-top: 0;
+        border-radius: 15px;
+    }
+    .mens{
+        border: 2px solid purple;
+        margin-bottom: 20px;
+        margin-top: 0;
+        border-radius: 15px;
+    }
+    .kids{
+        border: 2px solid purple;
+        margin-bottom: 20px;
+        margin-top: 0;
+        border-radius: 15px;
+    }
+    .item{
+        display:flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-evenly;
+        margin:10px;
+    }
+    .itema{
+        display:flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom:20px;
+    }
+    .item1{
+        border: 2px solid purple;
+        /* margin-bottom: 20px; */
+        /* margin-top: 0; */
+        border-radius: 10px;
+        text-align: center ;
+        padding: 2px;
+        margin-bottom:20px;
+        cursor:pointer;
+    }
+    .item2{
+        border: 2px solid purple;
+        /* margin-bottom: 20px; */
+        /* margin-top: 0; */
+        border-radius: 10px;
+        text-align: center ;
+        padding: 2px;
+        cursor:pointer;
+    }
+    .item3{
+        border: 2px solid purple;
+        /* margin-bottom: 20px; */
+        /* margin-top: 0; */
+        border-radius: 10px;
+        text-align: center ;
+        padding: 2px;
+        cursor:pointer;
+    }
+    .item4{
+        border: 2px solid purple;
+        /* margin-bottom: 20px; */
+        /* margin-top: 0; */
+        border-radius: 10px;
+        text-align: center ;
+        padding: 2px;
+        cursor:pointer;
+    }
+    .item5{
+        border: 2px solid purple;
+        /* margin-bottom: 20px; */
+        /* margin-top: 0; */
+        border-radius: 10px;
+        text-align: center ;
+        padding: 2px;
+        cursor:pointer;
+    }
+    .item6{
+        border: 2px solid purple;
+        /* margin-bottom: 20px; */
+        /* margin-top: 0; */
+        border-radius: 10px;
+        text-align: center ;
+        padding: 2px;
+        cursor:pointer;
+    }
+    .item1:hover{
+        transform:scale(1.2);
+    }
+    .item2:hover{
+        transform:scale(1.2);
+    }
+    .item3:hover{
+        transform:scale(1.2);
+    }
+    .item4:hover{
+        transform:scale(1.2);
+    }
+    .item5:hover{
+        transform:scale(1.2);
+    }
+    .item6:hover{
+        transform:scale(1.2);
+    }
+    #special{
+        color: purple;
+        text-align: center;
+        font-size:40px;
+    }
+    .bg{
+        /* overflow: hidden; */
+        display: inline-block;
+        margin-left: 28%;
+        background-color: rgb(241, 227, 227);
+    }
+    .contactus{
+        width:100%;
+        border: 2px solid rgb(223, 212, 212);
+        text-align: center;
+    }
+    #email{
+        color:rgb(146, 3, 3);
+        font-size: 25px;
+        padding:12px;
+    }
+    label{
+        font-size: 25px;
+        margin-right: 18px;
+    }
+    .btn-sub{
+        padding:12px;
+        background-color:rgb(129, 91, 91) ;
+        font-size: 25px;
+        border-radius:20px;
+    }
+    .btn-sub:hover{
+        cursor: pointer;
+        color: honeydew;
+        background-color:rgb(55, 37, 78) ;
+    }
+    .background{
+        background-color: honeydew;
+    }
+</style>
+<body>
+    <header class="up">
+    <div class="navbar">
+        <div class="leftnav">
+            <div class="logo">
+                <img src="logoa.jpg" alt="">
+            </div>
+            <div class="list-items">
+                <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">category</a></li>
+                <li><a href="#">latest</a></li>         
+                <li><a href="#">blog</a></li>
+                <li><a href="#">pages</a></li>
+                <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightnav">
+            <input type="text" name="search" id="search" placeholder="search here" >
+            <button class="btn">Search</button>
+        </div>
+    </div>
+    <div class="offer">
+        <!-- <img src="ffer.jpg" alt=""> -->
+        <p class=" title">Aman clothings presents
+        <br>biggest summer deal</p>
+    </div>
+    </header>
+    <section class="background">
+    <p id="category">category</p>
+    <section class="dresses"> 
+        <!-- <div class="flex"> -->
+        <div class="womens">
+            <p class="cat">womens</p>
+            <img src="women.jpg" alt="">
+            <p class="off">flat 40% off</p>
+        </div>
+        <div class="mens">
+            <p class="cat">mens</p>
+            <img src="mens.jpg" alt="" style="width: 200px">
+            <p class="off">flat 40% off</p>
+        </div>
+        <div class="kids">
+            <p class="cat">kids</p>
+            <img src="kids.jpg" alt="" style="width: 200px">
+            <p class="off">flat 40% off</p>
+        </div>
+    <!-- </div> -->
+    </section>
+    <p id="special">special offer</p>
+    <section class="item">
+        <div class="item1">
+            <p>jacket</p>
+            <img src="item1.jpg" alt="" >
+            <p>$20</p>
+        </div>
+        <div class="item2">
+            <p>saree</p>
+            <img src="item2.jpg" alt="">
+            <p>$25</p>
+        </div>
+        <div class="item3">
+            <p>full sleeves shirts</p>
+            <img src="item3.jpg" alt="">
+            <p>$20</p>
+        </div>
+    </section>
+    <section class="itema">
+        <div class="item4">
+            <p>frocks suit</p>
+            <img src="item4.jpg" alt="" style="height:159px">
+            <p>$25</p>
+        </div>
+        <div class="item5">
+            <p>frocks</p>
+            <img src="item5.jpg" alt="">
+            <p>$20</p>
+        </div>
+        <div class="item6">
+            <p>sweaters</p>
+            <img src="item6.jpg" alt=""style="height:159px">
+            <p>$25</p>
+        </div>
+    </section>
+    <footer class="bg">
+        <form action="none.php">
+            <div class="contactus">
+                <h1>CONTACT US FOR MORE SUCH AMAZING OFFERS </h1>
+                <hr>
+                <label for="email"><b>EMAIL</b></label>
+                <input type="text" placeholder="email address" id="email">
+                <hr>
+                <button class="btn-sub">submit</button>
+            </div>
+        </form>
+    </footer>
+</section>
+</body>
+</html>
